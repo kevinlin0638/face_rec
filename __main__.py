@@ -36,5 +36,16 @@ def recognize(m_name):
 
     for index, konw in enumerate(known_faces):
         results = face_recognition.compare_faces(konw, unknown_person_encoding)
+        count = 0
+        for res in results:
+            if res:
+                count += 1
+        success_rate = float(count / len(results))
+        if success_rate > 0.5:
+            print('您要辨識的臉是 ' + str(index + 1) + ' 號 - 符合率 : ' + str(math.floor(success_rate * 100)) + '%')
+            return
+
+    print('我們無法辨別此臉，尚未學習過')
+
 
 
