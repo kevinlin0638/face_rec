@@ -48,4 +48,13 @@ def recognize(m_name):
     print('我們無法辨別此臉，尚未學習過')
 
 
+if __name__ == '__main__':
+    prepare_data()
+    while True:
+        name = input('請輸入要辨識的檔案位置 : ')
+
+        if name.lower() == 'exit':
+            break
+        else:
+            recognize(name)
 
