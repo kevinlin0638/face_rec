@@ -26,3 +26,15 @@ def prepare_data():
             quit()
 
 
+def recognize(m_name):
+    if os.path.isfile(m_name):
+        unknow_person = face_recognition.load_image_file(m_name)
+    else:
+        print('檔案不存在')
+        return
+    unknown_person_encoding = face_recognition.face_encodings(unknow_person)[0]
+
+    for index, konw in enumerate(known_faces):
+        results = face_recognition.compare_faces(konw, unknown_person_encoding)
+
+
