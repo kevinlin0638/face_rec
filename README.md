@@ -1,5 +1,7 @@
 # 臉部辨識的專案<br>
-使用環境：python<br><br>
+組員：林新祐、徐梓恩、廖峻霆
+使用環境：python<br>
+使用套件：face_recognition, os, math<br><br>
 
 database裡存有50個人的照片各15張<br>
 先設置兩個陣列:images,face_encodigs方便學習過程間的存取<br>
@@ -27,4 +29,16 @@ database裡存有50個人的照片各15張<br>
 則將此欲辨識的照片判定為和照片i為同一個人<br>
 並print出準確度<br>
 若沒有則print出沒有學習過的提示訊息<br>
-[Alt text](https://i.imgur.com/CbynqIn.jpg)<br><br>
+[Alt text](https://i.imgur.com/CbynqIn.jpg)<br><br><br>
+辨識率：<br>
+在辨識部分，main中能提供輸入辨識照片的位置<br>
+輸入後程式將分析此張照片並找到相對的照片<br>
+其辨識率有75%<br>
+(輸入照片資料：100, 成功辨識資料：75)<br><br><br>
+
+問題討論：<br>
+辨識率僅有75%的原因可能在於照片的相似度<br>
+我們有發現部分照片被誤判為其他人<br>
+肉眼去搜尋辨識照片與結果照片時發現有些相似<br>
+程式以標記特徵點去學習長相<br>
+所以可能將相似的照片搞混導致結果失誤<br>
