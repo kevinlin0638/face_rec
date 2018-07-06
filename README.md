@@ -29,7 +29,7 @@ database裡存有50個人的照片各15張<br>
 則將此欲辨識的照片判定為和照片i為同一個人<br>
 並print出準確度<br>
 若沒有則print出沒有學習過的提示訊息<br>
-[Alt text](https://i.imgur.com/CbynqIn.jpg)<br><br><br>
+![Alt text](https://i.imgur.com/CbynqIn.jpg)<br><br><br>
 辨識率：<br>
 在辨識部分，main中能提供輸入辨識照片的位置<br>
 輸入後程式將分析此張照片並找到相對的照片<br>
